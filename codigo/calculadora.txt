@@ -1,0 +1,198 @@
+Algoritmo proyectofinal
+	//Jimmy Anderson Hernandez Valladares 7690-23-16916 seccion A ciclo I sede Boca del Monte
+	
+	//instrucciones solicitadas del menu
+	Definir n1,n2,a,b,f,c,resultado, opciones, cantidad,i,j, matriz,matriz2, contador Como Entero;
+	Definir lineas como caracter;
+	Escribir "que operacion quieres realizar";
+	Escribir "1. para realizar una suma";
+	Escribir "2. para realizar una resta";
+	Escribir "3. para realizar una multiplicacion";
+	Escribir "4. para realizar una division";
+	Escribir "5. para realizar un cuadrado";
+	Escribir "6. para realizar un triangulo";
+	Escribir "7. para una suma de matriz";
+	Escribir "8. para una resta de matriz";
+	Escribir "9. para sumar todos los valores de una matri";
+	Escribir "10. para restar todos los valores de una matriz";
+	Leer opciones;
+	//opciones a realizar en el menu
+	Segun opciones Hacer
+		//realizar una suma en la primera opcion
+		1:
+			Escribir "ingrese el primer numero";
+			Leer n1;
+			Escribir "ingrese el segundo numero";
+			Leer n2;
+			resultado<-n1+n2;
+			Escribir "el total de la suma es:", resultado;
+		//realizar una resta en la segunda opcion
+		2:
+			Escribir "ingrese el primer numero";
+			Leer n1;
+			Escribir "ingrese el segundo numero";
+			Leer n2;
+			resultado<-n1-n2;
+			Escribir "el total de la resta es:", resultado;
+		//realizar una multiplicacion en la tercera opcion
+		3:
+			Escribir "ingrese el primer numero";
+			Leer n1;
+			Escribir "ingrese el segundo numero";
+			Leer n2;
+			resultado<-n1*n2;
+			Escribir "el total de la multiplicacion es:", resultado;
+		// realizar una division en la cuarta opcion
+		4:
+			Escribir "ingrese el primer numero";
+			Leer n1;
+			Escribir "ingrese el segundo numero";
+			Leer n2;
+			resultado<-n1/n2;
+			Escribir "el total de la division es:", resultado;
+		//realizar un cuadrado con asteriscos en la quinta opcion
+		5:
+			Escribir "ingrese la cantidad deseada para obtener un cuadrado";
+			leer cantidad;
+			Para i <- 1 Hasta cantidad  Con Paso 1 Hacer
+				Para j <- 1 Hasta cantidad   Con Paso 1 Hacer
+					si i > 1 y i < cantidad y j > 1 y j < cantidad Entonces
+						Escribir "  " Sin Saltar;
+					SiNo
+						
+						Escribir Sin Saltar"* ";
+					FinSi
+					
+					FinPara
+					Escribir "";
+				FinPara
+				Escribir " ";
+			//realizar un triangulo de numero impares en la sexta opcion
+		6:
+			Escribir "ingrese la cantidad que desea que tenga el triangulo";
+			leer cantidad;
+			contador<-1;
+			Para i <- 0 Hasta cantidad - 1 Con Paso 1 Hacer
+				contador<-contador+2;
+				Para j <- 0 Hasta i Con Paso 1 Hacer
+					Escribir contador Sin Saltar " ";
+				FinPara
+				Escribir " ";
+			FinPara
+		//realizar una suma de matrices en la septima opcion
+		7:
+			Escribir "ingrese un numero entero para obtener las filas y columnas de la matriz";
+			Leer a,b;
+			Dimension matriz[10,10], matriz2[10,10];
+			Escribir "ingrese los valores que tendra la matriz";
+			para f <- 1 Hasta a Con Paso 1 Hacer
+				para c <- 1 Hasta b Con Paso 1 Hacer
+					Leer matriz(f,c);
+				FinPara
+			FinPara
+			para f <- 1 Hasta a Con Paso 1 Hacer
+				para c <- 1 Hasta b Con Paso 1 Hacer
+					Escribir matriz(f,c), " " Sin Saltar;
+				FinPara
+				Escribir " ";
+			FinPara
+			Escribir "ingrese los valores de la segunda matriz";
+			para f <- 1 Hasta a Con Paso 1 Hacer
+				para c <- 1 Hasta b Con Paso 1 Hacer
+					Leer matriz2(f,c);
+				FinPara
+			FinPara
+			resultado <- 0;
+			para f <- 1 Hasta a Con Paso 1 Hacer
+				para c <- 1 Hasta b Con Paso 1 Hacer
+					Escribir matriz2(f,c), " " Sin Saltar;
+					resultado <- matriz[f,c] + matriz2[f,c];
+				FinPara
+				Escribir " ";
+			FinPara
+			Escribir "la suma de las matrices es; ", resultado;
+		//realizar una resta de matrices en la octava opcion
+			
+	    8:
+		
+		    Escribir "ingrese un numero entero para obtener las filas y columnas de la matriz";
+		    Leer a,b;
+		    Dimension matriz[10,10], matriz2[10,10];
+		    Escribir "ingrese los valores que tendra la matriz";
+		    para f <- 1 Hasta a Con Paso 1 Hacer
+			   para c <- 1 Hasta b Con Paso 1 Hacer
+				   Leer matriz(f,c);
+			    FinPara
+		    FinPara
+			para f <- 1 Hasta a Con Paso 1 Hacer
+			    para c <- 1 Hasta b Con Paso 1 Hacer
+				   Escribir matriz(f,c), " " Sin Saltar;
+			    FinPara
+			       Escribir " ";
+		    FinPara
+		      Escribir "segunda matriz";
+		    para f <- 1 Hasta a Con Paso 1 Hacer
+			    para c <- 1 Hasta b Con Paso 1 Hacer
+				  Leer matriz2(f,c);
+			    FinPara
+		    FinPara
+		    resultado <- 0;
+		    para f <- 1 Hasta a Con Paso 1 Hacer
+			    para c <- 1 Hasta b Con Paso 1 Hacer
+				 Escribir matriz2(f,c), " " Sin Saltar;
+				 resultado <- matriz[f,c] - matriz2[f,c];
+			    FinPara
+			    Escribir " ";
+		    FinPara
+		    Escribir "la resta de las matrices es; ", resultado;
+		//realizar una suma de todos los valores de la matriz en la opcion novena
+	    9:
+		
+			Escribir "ingrese un numero entero para obtener las filas y columnas de la matriz";
+			Leer a,b;
+			Dimension matriz[10,10];
+		    Escribir "ingrese los valores que tendra la matriz";
+		    para f <- 1 Hasta a Con Paso 1 Hacer
+			    para c <- 1 Hasta b Con Paso 1 Hacer
+				  Leer matriz(f,c);
+			    FinPara
+		    FinPara
+		     resultado<-0;
+		    para f <- 1 Hasta a Con Paso 1 Hacer
+			    para c <- 1 Hasta b Con Paso 1 Hacer
+				 Escribir matriz(f,c), " " Sin Saltar;
+				 resultado <- resultado+matriz(f,c);	
+			    FinPara
+			  Escribir " ";
+		    FinPara
+			Escribir "la suma de todos los valores de la matriz es; ", resultado;
+		//realizar una resta de todos los valores de la matriz en la decima opcion
+		10:
+			
+			Escribir "ingrese un numero entero para obtener las filas y columnas de la matriz";
+			Leer a,b;
+			Dimension matriz[10,10];
+		    Escribir "ingrese los valores que tendra la matriz";
+		    para f <- 1 Hasta a Con Paso 1 Hacer
+			    para c <- 1 Hasta b Con Paso 1 Hacer
+					Leer matriz(f,c);
+			    FinPara
+		    FinPara
+			resultado<-0;
+		    para f <- 1 Hasta a Con Paso 1 Hacer
+			    para c <- 1 Hasta b Con Paso 1 Hacer
+				  Escribir matriz(f,c), " " Sin Saltar;
+				  resultado <- matriz(f,c) - matriz(f,c);	
+			    FinPara
+				Escribir " ";
+		    FinPara
+			Escribir "la resta de todos los valores de la matriz es; ", resultado;
+		
+			
+		De Otro Modo:
+			Escribir "la accion es invalida";
+	Fin Segun
+	
+
+	
+FinAlgoritmo
